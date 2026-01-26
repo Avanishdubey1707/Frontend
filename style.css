@@ -1,3 +1,13 @@
-td{
-    border: 2px solid black;
+p{
+    background-color: aquamarine;
+}
+
+a{
+    background-color: rgb(148, 212,220);
+}
+div{
+    background-color: rgb(148, 212,220);
+}
+span{
+    background-color: rgb(148, 212,220);
 }
