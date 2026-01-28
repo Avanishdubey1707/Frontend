@@ -2,38 +2,51 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
-        <title>CSS Overflow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>Float and clear </title>
 
-        <style>
-            *{
-                margin:0;
-                padding: 0;
-            }
-            .box{
-               width: 30vw;
-               height: 23vh;
-               border: 2px solid black;
-               overflow: auto hiddenf;
-            }
-
-           
-           
-
-           
-        </style>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float:left;
+        }
+        .card{
+            border: 2px solid red;
+        }
 
 
-    </head>
 
-    <body>
-        <div class="box">
-            ms dhoni
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quia voluptate reprehenderit quos ullam, dolore alias, eos asperiores adipisci cum, eum nisi! Fugit.</P>
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT7y-YxX-g-sb-3TJcBXs5cYDUy3vG-BrevTEsiIdCYsvfMfa_ykQrXu_xjtWfGJy05cVaaRKngt3I5kDgNp8KyrjzUehsGpC0fXqwbPWvYbFhXKAbggJ1RG1HkNj45XYde9S8BbAvRuUm7wAWlz6SD&s=19&ec=121507526"
+            alt="" width="230">
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident ducimus voluptatem voluptatibus,
+                placeat sequi illo temporibus iste voluptas odit nulla, mollitia quae non, praesentium quaerat dolorum
+                aut explicabo eveniet eaque? Molestiae, ab. Placeat dolorem laboriosam, ad repellendus nostrum qui, unde
+                non ullam repudiandae porro dolorum?</p>
         </div>
-        
-        
-       
-    </body>
+        <div class="card">card2</div>
+        <div class="card">card3</div>
+
+
+    </div>
+
+
+
+</body>
+
 </html>
