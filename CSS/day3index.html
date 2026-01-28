@@ -1,49 +1,114 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width ,initial-scale=1.0">
-    <title>Float and clear </title>
+    <title> CSS Flexbox </title>
 
     <style>
-        .cards{
-            border: 2px solid black;
-            display: flow-root;
-        }
-        img{
-            float:left;
-        }
-        .card{
+        .container{
             border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            justify-items: flex-end;
+            flex-direction: column;
+
         }
 
-
-
-
-
-
-
+        .item{
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            margin: 4px;
+            background-color: blueviolet;
+        }
+        
+        
     </style>
 
 
 </head>
 
 <body>
-    <div class="cards">
-        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT7y-YxX-g-sb-3TJcBXs5cYDUy3vG-BrevTEsiIdCYsvfMfa_ykQrXu_xjtWfGJy05cVaaRKngt3I5kDgNp8KyrjzUehsGpC0fXqwbPWvYbFhXKAbggJ1RG1HkNj45XYde9S8BbAvRuUm7wAWlz6SD&s=19&ec=121507526"
-            alt="" width="230">
-        <div class="card">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident ducimus voluptatem voluptatibus,
-                placeat sequi illo temporibus iste voluptas odit nulla, mollitia quae non, praesentium quaerat dolorum
-                aut explicabo eveniet eaque? Molestiae, ab. Placeat dolorem laboriosam, ad repellendus nostrum qui, unde
-                non ullam repudiandae porro dolorum?</p>
+    <main>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
         </div>
-        <div class="card">card2</div>
-        <div class="card">card3</div>
+    </main>
+       
 
 
-    </div>
+   
+
+
+
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title> CSS GRID </title>
+
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 120px 100px; 
+
+        }
+
+        .item{
+            
+            border: 2px solid red;
+            height: 55px;
+            
+        }
+        .item-4{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .item-1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        
+        
+    </style>
+
+
+</head>
+
+<body>
+    
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+           
+        </div>
+    
+       
+
+
+   
 
 
 
