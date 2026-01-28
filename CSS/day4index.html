@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+        <title>CSS Transitions</title>
+        <style>
+            .container{
+                background-color: antiquewhite;
+                width: 50vw;
+                height: 40vh;
+            }
+            .box{
+                background-color: aquamarine;
+                width: 5vw;
+                height: 4vh;
+                transition-property: all;
+                transition-duration: 3s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 1s;
+            }
+            .translate{
+                transform: translate(10vw) translate(10vh);
+                background-color: blue;
+
+
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box translate"></div>
+        </div>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+        <title>Animation of css</title>
+        <style>
+            .container{
+                background-color: antiquewhite;
+                width: 80vw;
+                height: 40vh;
+            }
+            .box{
+                background-color: aquamarine;
+                width: 45vw;
+                height: 34vh;
+                animation-name:msdhonithecaptain ;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+               
+            }
+            @keyframes msdhonithecaptain {
+                from{
+
+                }
+                to{
+                    transform: translate(1000px);
+                }
+                
+            }
+            
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">box</div>
+        </div>
+    </body>
+</html>
