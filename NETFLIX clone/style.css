@@ -218,3 +218,32 @@ section.first > div :nth-child(2){
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+footer{
+    color:white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 14px;
+
+
+}
+
+
+
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+ 
+    
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+}
