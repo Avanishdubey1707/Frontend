@@ -36,17 +36,20 @@ async function main() {
          </li>`;
         
     }
-    
 
 
-    var audio = new Audio(songs[0])
-    audio.play();
 
+    // Attach an event listener to each song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
 
-    audio.addEventListener("loadeddata", () => {
-        console.log(audio.duration,audio.currentSrc, audio.currentTime )
-    });
-    
+        })
+    })
+
+    return songs
 }
+    
+
 
 main()
