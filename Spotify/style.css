@@ -3,10 +3,13 @@
 *{
     margin: 0;
     padding: 0;
-    body {
+   
     font-family: 'Roboto', sans-serif;
-}
 
+
+}
+.close{
+    display: none;
 }
 body{
     background-color: black;
@@ -85,12 +88,16 @@ body{
 .spotifyPlaylists{
     padding: 16px;
 }
+.spotifyPlaylists h1{
+    padding: 16px;
+}
 .cardContainer{
     margin:30px;
     display: flex;
     gap:10px;
+   
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 
 }
@@ -173,7 +180,7 @@ body{
     width: 90%;
     padding: 12px;
     width: 70vw;
-    height: 40px;
+    min-height: 40px;
 
 }
 
@@ -186,6 +193,15 @@ body{
     height: 544px;
     overflow: auto;
     margin-bottom: 44px;
+}
+.hamburgur{
+    display: none;
+}
+.hamburgurContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 .songList ul{
     padding:0 12px;
@@ -223,7 +239,7 @@ body{
    
 }
 .seekbar{
-    height: 2px;
+    height: 4px;
     width: 98%;
     background: black;
     position :absolute;
@@ -239,6 +255,71 @@ body{
     bottom: 6px;
     left: 0%;
     transition: left 0.5s;
+}
+.songbuttons img{
+    cursor: pointer;
+}
+.songinfo, .songtime{
+    color: black;
+    padding: 0 12px;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+@media (max-width:1400px) {
+    .left{
+        background-color: black;
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 370px;
+    }
+    .left .close{
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+
+    }
+    .right{
+        width: 100vw;
+
+    }
+    .playbar{
+        width: calc(100vw-75px);
+    }
+    .seekbar{
+        width: calc(100vw-120px);
+    }
+
+    .hamburgur{
+        display: block;
+    }
+
+    .card{
+        width: 90vw;
+    }
+    .cardContainer{
+        margin: 0;
+        justify-content: center;
+    }
+    .close{
+        display: block;
+    }
+    .right{
+        margin: 0;
+    }
+    .abovebar{
+        flex-direction: column;
+        gap:23px;
+        align-items: center;
+    }
+
+    
 }
 
 
