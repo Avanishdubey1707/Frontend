@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap');
 
-*{
+:root{
+    --a:0;
+}
+* {
     margin: 0;
     padding: 0;
    
@@ -108,11 +111,17 @@ body{
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+    transition: all .9s;
 
 
 }
+.card:hover{
+    background-color: rgb(105,103,103);
+    cursor: pointer;
+    --a:1;
+}
 .card > *{
-    padding: top 10px;
+    padding-top: 10px;
         
     
 }
@@ -133,7 +142,7 @@ body{
     position: absolute;
     top: 168px;
     right: 17px;
-    opacity: 0;
+    opacity: var(--a);
     transition: all 1s ease-out;
 }
 .buttons >*{
@@ -176,7 +185,6 @@ body{
     filter: invert(1);
     background:#dad5d5;
     border-radius: 10px;
-    
     width: 90%;
     padding: 12px;
     width: 70vw;
@@ -224,6 +232,10 @@ body{
     font-size: 13px;
     width: 344px;
 }
+.info div{
+    word-break: break-all;
+
+}
 
 
 .playnow{
@@ -259,9 +271,24 @@ body{
 .songbuttons img{
     cursor: pointer;
 }
-.songinfo, .songtime{
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.songinfo{
     color: black;
     padding: 0 12px;
+    width: 250px;
+}
+.songtime{
+    width: 125px;
+    color: black;
+    padding: 0 12px;
+}
+.volume{
+    display: flex;
+    flex-direction: column;
 }
 
 .abovebar{
@@ -277,6 +304,7 @@ body{
         transition: all .3s;
         z-index: 1;
         width: 370px;
+        padding: 0;
     }
     .left .close{
         position: absolute;
@@ -285,6 +313,14 @@ body{
         width: 29px;
 
     }
+    .timevol{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
+    }
+    
     .right{
         width: 100vw;
 
@@ -301,7 +337,10 @@ body{
     }
 
     .card{
-        width: 90vw;
+        width: 44vw;
+    }
+    .songinfo, .songtime{
+        width: auto;
     }
     .cardContainer{
         margin: 0;
@@ -317,6 +356,13 @@ body{
         flex-direction: column;
         gap:23px;
         align-items: center;
+    }
+
+    
+}
+@media (max-width:400px)  {
+    .card{
+        width: 84px;
     }
 
     
