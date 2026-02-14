@@ -114,14 +114,16 @@ async function displayAlbums() {
     const albums = [
         { folder: "ncs", title: "NCS Playlist", description: "Non copyright music" },
         { folder: "cs", title: "Coding Beats", description: "Programming music" },
-        { folder: "Arijit Singh", title: "Arijit Songs", description: "Arijit singh's songs" }
+        { folder: "Arijit Singh", title: "Arijit Songs", description: "Arijit singh's songs" },
+        { folder : "Pawan_Singh", title: "Pawan Hits",    description: "Pawan singh's somgsvbnm"}
     ];
 
     albums.forEach(album => {
         cardContainer.innerHTML += `
         <div class="card" data-folder="${album.folder}">
             <div class="play">▶</div>
-            <img src="songs/${album.folder}/cover.jpg" alt="">
+            <img src="/Spotify/songs/${album.folder}/cover.jpg" alt="">
+
             <h2>${album.title}</h2>
             <p>${album.description}</p>
         </div>`;
