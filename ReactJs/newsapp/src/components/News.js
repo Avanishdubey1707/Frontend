@@ -10,8 +10,8 @@ export class News extends Component {
 "author": "feedfeeder",
 "title": "Tesla CarPlay is coming but it's reportedly being held back by low iOS 26 adoption numbers",
 "description": "We're still waiting for Apple CarPlay compatibility for Tesla EVs, but it's been pushed back thanks to a slight hitch with iOS 26, according to Bloomberg 's Mark Gurman. In the latest Power On newsletter, Gurman said that Tesla's plans to adopt CarPlay have b…",
-"url": "https://slashdot.org/firehose.pl?op=view&amp;id=180796406",
-"urlToImage": null,
+"url": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/400200/400228.jpg",
+"urlToImage": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/400200/400228.jpg",
 "publishedAt": "2026 02 15T17:52:50Z",
 "content": "We're still waiting for Apple CarPlay compatibility for Tesla EVs, but it's been pushed back thanks to a slight hitch with iOS 26, according to Bloomberg's Mark Gurman. In the latest Power On newslet… [+1540 chars]"
 },
@@ -23,8 +23,8 @@ export class News extends Component {
 "author": "Daniel Zlatev",
 "title": "Tesla launches 0.99% Model Y Premium APR financing deal amid 17% January sales slump",
 "description": "As Tesla's January sales are down 17% year on year and it reported its first ever annual revenue decline, it is trying to turn things around, at least in the US. The 2026 Model Y Premium trims are now getting their first APR financing deal for the year.",
-"url": "https://www.notebookcheck.net/Tesla launches 0 99 Model Y Premium APR financing deal amid 17 January sales slump.1227280.0.html",
-"urlToImage": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/Model Y apr financing.jpg",
+"url": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/400200/400228.jpg",
+"urlToImage": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/400200/400228.jpg",
 "publishedAt": "2026 02 15T17:12:00Z",
 "content": "Faced with an unprecedented sales slump and its first annual drop in revenue after the federal tax credit expired last year, Tesla is speeding up its own incentives program to try and turn its fortun… [+1695 chars]"
 },
@@ -81,16 +81,14 @@ export class News extends Component {
       <div className="container my-3">
            <h2>NewsMonkey - Top Headlines</h2>
            <div className="row">
-               <div className="col-md-4">
-                    <Newsitem title="mytitle" description="mydesc" imageUrl="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_60/lsci/db/PICTURES/CMS/104900/104926.jpg" newsUrl="TODO"/>
-               </div>
-                <div className="col-md-4">
-                    <Newsitem title="mytitle" description="mydesc"/>
-               </div>
-                <div className="col-md-4">
-                    <Newsitem title="mytitle" description="mydesc"/>
+            {this.state.articles.map((element)=>{
+                return  <div className="col-md-4" key={element.url}>
+                    <Newsitem title={element.title.slice(0,88)} description={element.description.slice(0,45)} imageUrl={element.urlToImage} newsUrl={element.url}/>
                </div>
 
+            })}
+              
+                
            </div>
          
         
