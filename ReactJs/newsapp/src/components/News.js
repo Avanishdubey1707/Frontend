@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
 import Newsitem from './Newsitem'
 import Spinner from './Spinner';
+
+import PropTypes from 'prop-types'
 export class News extends Component {
+    static defaultProps = {
+    country: 'in',
+    pageSize: 8
+}
+
+static propTypes = {
+    country: PropTypes.string,
+    pageSize: PropTypes.number
+}
+
 
     constructor() {
         super();
@@ -15,7 +27,7 @@ export class News extends Component {
 
     async componentDidMount() {
         console.log("cdm");
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=1&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=1&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
         let parsedData = await data.json()
         console.log(parsedData);
@@ -23,7 +35,7 @@ export class News extends Component {
     }
     handleprevClick = async () => {
         console.log("prev")
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
         {this.setState({loading:true})}
         let data = await fetch(url);
         let parsedData = await data.json()
@@ -39,7 +51,7 @@ export class News extends Component {
 
     handlenextClick = async () => {
         console.log("next")
-          let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+          let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=business&apiKey=61e2646e36714b04ae9360d2015e77f9&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
            {this.setState({loading:true})}
         let data = await fetch(url);
         let parsedData = await data.json()
