@@ -112,10 +112,11 @@ async function displayAlbums() {
     cardContainer.innerHTML = "";
 
     const albums = [
-        { folder: "ncs", title: "NCS Playlist", description: "Non copyright music" },
+        
         { folder: "cs", title: "Coding Beats", description: "Programming music" },
         { folder: "Arijit Singh", title: "Arijit Songs", description: "Arijit singh's songs" },
-        { folder : "Pawan_Singh", title: "Pawan Hits",    description: "Pawan singh's somgsvbnm"}
+        { folder : "Pawan_Singh", title: "Pawan Hits",    description: "Pawan singh's somgsvbnm"},
+         { folder: "ncs", title: "NCS Playlist", description: "Non copyright music" }
     ];
 
     albums.forEach(album => {
