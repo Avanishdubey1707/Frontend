@@ -25,6 +25,7 @@ import React from 'react'
                         <li className="nav-item"><a className="nav-link" href="/about">Science</a></li>
                         <li className="nav-item"><a className="nav-link" href="/about">Sports</a></li>
                         <li className="nav-item"><a className="nav-link" href="/about">Technology</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/about">Geopolitics</a></li>
                      </ul>
                    
                 </div>
